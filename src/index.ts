@@ -1,3 +1,4 @@
 import { someFn } from './test';
 
-someFn();
+const arg = 5;
+someFn(arg);
