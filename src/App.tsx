@@ -1,14 +1,22 @@
 import { Suspense } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Counter from "./components/Counter";
-import "./normalize.css";
+import { useTheme } from "./contexts/ThemeContext";
+
 import CiderPageAsync from "./pages/CiderPage/index.async";
 import MainPageAsync from "./pages/MainPage/index.async";
 
+import "./styles/index.scss";
+
 export default function App() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <div>
-      <Counter />
+    <div className={`app ${theme}`}>
+      <div>
+        <Counter />
+      </div>
+      <button onClick={toggleTheme}>Toggle theme</button>
       <nav>
         <Link to="/">React app</Link>
         <Link to="/cider">Apple cider</Link>
