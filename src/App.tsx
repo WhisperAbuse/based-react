@@ -1,10 +1,11 @@
 import { Suspense } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Counter from "./components/Counter";
-import { useTheme } from "./contexts/ThemeContext";
 
 import CiderPageAsync from "./pages/CiderPage/index.async";
 import MainPageAsync from "./pages/MainPage/index.async";
+
+import useTheme from "./theme/useTheme";
 
 import "./styles/index.scss";
 
