@@ -1,5 +1,5 @@
 import { PropsWithChildren, useMemo, useState } from "react";
-import ThemeContext, { Theme, ThemeContextProps } from "./ThemeContext";
+import ThemeContext, { Theme, ThemeContextProps } from "../lib/ThemeContext";
 
 interface ThemeProviderProps {}
 

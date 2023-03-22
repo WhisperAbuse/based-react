@@ -1,4 +1,4 @@
-import { createContext, Dispatch, SetStateAction, useContext } from "react";
+import { createContext, Dispatch, SetStateAction } from "react";
 
 export const THEME_LOCAL_STORAGE_KEY = "theme";
 

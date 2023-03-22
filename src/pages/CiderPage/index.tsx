@@ -1,5 +1,3 @@
-const CiderPage = () => {
-  return <h1>Apple Cider</h1>;
-};
+import { CiderPageAsync } from "./ui/index.async";
 
-export default CiderPage;
+export { CiderPageAsync as CiderPage };
