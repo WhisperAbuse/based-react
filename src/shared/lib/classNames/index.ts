@@ -1,7 +1,7 @@
 export default function cx(
   className: string,
-  mods: Record<string, boolean>,
-  additional: string[]
+  mods?: Record<string, boolean>,
+  additional?: string[]
 ) {
   const modsCombined = Object.entries(mods)
     .filter(([, value]) => Boolean(value))

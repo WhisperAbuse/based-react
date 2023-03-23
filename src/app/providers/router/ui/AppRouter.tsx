@@ -7,7 +7,7 @@ const AppRouter = () => {
     <Suspense>
       <Routes>
         {Object.values(routeConfig).map((route) => (
-          <Route {...route} />
+          <Route key={route.path} {...route} />
         ))}
       </Routes>
     </Suspense>
