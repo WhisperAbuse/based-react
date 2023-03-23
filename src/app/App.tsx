@@ -5,8 +5,7 @@ import { useTheme } from "./providers/ThemeProvider";
 
 import "@/app/styles/index.scss";
 import cx from "@/shared/lib/classNames";
-import { CiderPage } from "@/pages/CiderPage";
-import { MainPage } from "@/pages/MainPage";
+import { AppRouter } from "./providers/router";
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
@@ -18,12 +17,7 @@ export default function App() {
         <Link to="/">React app</Link>
         <Link to="/cider">Apple cider</Link>
       </nav>
-      <Suspense>
-        <Routes>
-          <Route path="/" Component={MainPage} />
-          <Route path="/cider" Component={CiderPage} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 }
