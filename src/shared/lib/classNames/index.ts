@@ -7,8 +7,12 @@ export default function cx(
     .filter(([, value]) => Boolean(value))
     .map(([key]) => key);
 
-  const classResult = [className, ...modsCombined, ...additional]
-    .join(" ")
+  const classResult = [
+    className,
+    ...(modsCombined || []),
+    ...(additional || []),
+  ]
+    .join(' ')
     .trim();
 
   return classResult;
