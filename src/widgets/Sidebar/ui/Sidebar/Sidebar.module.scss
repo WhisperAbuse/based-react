@@ -16,4 +16,10 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  gap: 20px;
+}
+
+.Toggle {
+  color: var(--inverted-primary-color);
+  transition: color ease-out 150ms;
 }

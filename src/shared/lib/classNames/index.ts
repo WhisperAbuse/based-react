@@ -3,7 +3,7 @@ export default function cx(
   mods?: Record<string, boolean>,
   additional?: string[]
 ) {
-  const modsCombined = Object.entries(mods)
+  const modsCombined = Object.entries(mods || {})
     .filter(([, value]) => Boolean(value))
     .map(([key]) => key);
 

@@ -12,6 +12,7 @@ export default function App() {
   return (
     <div className={cx('app', {}, [theme])}>
       <Navbar />
+
       <div className="content-page">
         <Sidebar />
         <AppRouter />
