@@ -24,7 +24,6 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
       onClick={toggleLanguage}
     >
       {i18n.language}
-      {t('New key')}
     </Button>
   );
 };
