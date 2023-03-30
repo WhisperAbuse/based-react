@@ -1,7 +1,7 @@
 import cx from '@/shared/lib/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 
-import { FC } from 'react';
+import { type FC } from 'react';
 
 import cls from './Navbar.module.scss';
 

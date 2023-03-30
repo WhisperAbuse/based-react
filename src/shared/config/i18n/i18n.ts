@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import Backend, { HttpBackendOptions } from 'i18next-http-backend';
+import Backend, { type HttpBackendOptions } from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 // don't want to use this?
 // have a look at the Quick start guide
@@ -20,19 +20,19 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init<HttpBackendOptions>({
-    fallbackLng: 'en',
-    debug: __IS_DEV__,
-    supportedLngs: ['en', 'ru'],
-    load: 'languageOnly',
+  fallbackLng: 'en',
+  debug: __IS_DEV__,
+  supportedLngs: ['en', 'ru'],
+  load: 'languageOnly',
 
-    interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
-    },
+  interpolation: {
+    escapeValue: false, // not needed for react as it escapes by default
+  },
 
-    backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
-      addPath: '/locales/add/{{lng}}/{{ns}}',
-    },
-  });
+  backend: {
+    loadPath: '/locales/{{lng}}/{{ns}}.json',
+    addPath: '/locales/add/{{lng}}/{{ns}}',
+  },
+});
 
 export default i18n;

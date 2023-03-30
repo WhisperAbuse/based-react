@@ -1,15 +1,15 @@
-import { CiderPage } from "@/pages/CiderPage";
-import { MainPage } from "@/pages/MainPage";
-import { RouteProps } from "react-router-dom";
+import { CiderPage } from '@/pages/CiderPage';
+import { MainPage } from '@/pages/MainPage';
+import { type RouteProps } from 'react-router-dom';
 
 export enum AppRoutes {
-  MAIN = "main",
-  CIDER = "cider",
+  MAIN = 'main',
+  CIDER = 'cider',
 }
 
 export const routePath: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: "/",
-  [AppRoutes.CIDER]: "/cider",
+  [AppRoutes.MAIN]: '/',
+  [AppRoutes.CIDER]: '/cider',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {

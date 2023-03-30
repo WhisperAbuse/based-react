@@ -1,10 +1,10 @@
-import webpack from 'webpack';
+import type webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
 
-import { BuildOptions } from './types/config';
+import { type BuildOptions } from './types/config';
 
-export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders (options: BuildOptions): webpack.RuleSetRule[] {
   const babelLoader = {
     test: /\.[jt]sx?$/,
     exclude: /node_modules/,
