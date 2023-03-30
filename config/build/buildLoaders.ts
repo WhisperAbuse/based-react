@@ -5,6 +5,26 @@ import ReactRefreshTypeScript from 'react-refresh-typescript';
 import { BuildOptions } from './types/config';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+  const babelLoader = {
+    test: /\.[jt]sx?$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: [
+          [
+            'i18next-extract',
+            {
+              locales: ['en', 'ru'],
+              keyAsDefaultValue: ['en'],
+            },
+          ],
+        ],
+      },
+    },
+  };
+
   const tsLoader = {
     test: /\.tsx?$/,
     use: [
@@ -66,5 +86,5 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
-  return [tsLoader, svgLoader, fileLoader, cssLoader];
+  return [babelLoader, tsLoader, svgLoader, fileLoader, cssLoader];
 }
