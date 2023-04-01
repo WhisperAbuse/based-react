@@ -1,0 +1,24 @@
+.Loader {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: var(--inverted-bg);
+  animation: loaderAnim 1s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes loaderAnim {
+  from {
+    transform: scale(0.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.2);
+  }
+}
