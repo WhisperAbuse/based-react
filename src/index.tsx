@@ -5,6 +5,8 @@ import { ThemeProvider } from './app/providers/ThemeProvider';
 
 import '@/shared/config/i18n/i18n';
 import { Suspense } from 'react';
+import { ErrorBoundary } from './app/providers/ErrorBoundary';
+import { PageError } from './widgets/PageError';
 
 const domNode = document.getElementById('root');
 const root = createRoot(domNode);
@@ -12,9 +14,11 @@ const root = createRoot(domNode);
 root.render(
   <Suspense fallback="">
     <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
+      <ErrorBoundary fallback={<PageError />}>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ErrorBoundary>
     </BrowserRouter>
   </Suspense>
 );

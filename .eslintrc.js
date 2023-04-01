@@ -29,6 +29,7 @@ module.exports = {
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
+    '@typescript-eslint/indent': 'off',
   },
   settings: {
     react: {
